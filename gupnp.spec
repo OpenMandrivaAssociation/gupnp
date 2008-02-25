@@ -15,6 +15,8 @@ Group: Development/Other
 Url: http://www.gupnp.org/sources/gupnp/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gssdp-devel
+BuildRequires: shared-mime-info
+BuildRequires: ext2fs-devel
 
 %description
 GUPnP is an object-oriented open source framework for creating UPnP devices and control points

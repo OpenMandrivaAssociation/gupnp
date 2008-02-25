@@ -1,11 +1,11 @@
 %define name gupnp
 %define version 0.6
-%define release %mkrel 1
+%define release %mkrel 2
 %define major 0
 %define libname %mklibname %{name}  %{major}
 %define develname %mklibname %{name} -d
 
-Summary: GUPnP is an object-oriented open source framework for creating UPnP devices and control points
+Summary: Object-oriented framework for creating UPnP devices and control points
 Name: %{name}
 Version: %{version}
 Release: %{release}

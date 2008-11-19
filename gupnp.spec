@@ -15,6 +15,7 @@ BuildRequires:	ext2fs-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
+BuildRequires:	libtasn1-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description

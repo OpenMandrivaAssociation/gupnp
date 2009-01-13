@@ -43,9 +43,9 @@ applications which will use gupnp
 
 %prep
 %setup -q
-%configure2_5x
 
 %build
+%configure2_5x
 %make
 
 %install

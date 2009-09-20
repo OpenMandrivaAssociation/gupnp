@@ -1,16 +1,16 @@
-%define major 2
+%define major 3
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.12.8
-Release:	%mkrel 2
+Version:	0.13.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
 Source0:	http://www.gupnp.org/sources/gupnp/%{name}-%{version}.tar.gz
-BuildRequires:	gssdp-devel >= 0.6.1
+BuildRequires:	gssdp-devel >= 0.7.0
 BuildRequires:	libuuid-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel

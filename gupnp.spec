@@ -16,6 +16,8 @@ BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gobject-introspection-devel
+#gw for Soup-2.4.gir
+BuildRequires:  gir-repository
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description

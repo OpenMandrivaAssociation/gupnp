@@ -4,7 +4,7 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.13.2
+Version:	0.13.3
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
@@ -15,6 +15,7 @@ BuildRequires:	libuuid-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
+BuildRequires:	gobject-introspection-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -26,6 +27,7 @@ devices and control points.
 Summary:	Main library for gupnp
 Group:		System/Libraries
 Provides:	%{name} = %{version}-%{release}
+Conflicts: gir-repository < 0.6.5-11
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
@@ -36,6 +38,7 @@ Summary:	Headers for developing programs that will use gupnp
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
+Conflicts: gir-repository < 0.6.5-11
 
 %description -n %{develname}
 This package contains the headers that programmers will need to develop
@@ -65,6 +68,8 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %{_libdir}/*.so.%{major}*
+%_libdir/girepository-1.0/GUPnP-1.0.typelib
+
 
 %files -n %{develname}
 %defattr(-,root,root)
@@ -76,3 +81,5 @@ rm -rf %{buildroot}
 %{_libdir}/*.a
 %{_datadir}/gtk-doc/html/*
 %{_bindir}/gupnp-binding-tool
+%_datadir/gir-1.0/GUPnP-1.0.gir
+

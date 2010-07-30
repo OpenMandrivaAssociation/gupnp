@@ -5,7 +5,7 @@
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
 Version:	0.13.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
@@ -16,8 +16,6 @@ BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gobject-introspection-devel
-#gw for Soup-2.4.gir
-BuildRequires:  gir-repository
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description

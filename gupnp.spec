@@ -1,18 +1,19 @@
+%define api 1.0
 %define major 3
-%define libname %mklibname %{name} %{major}
+%define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.13.5
-Release:	%mkrel 4
+Version:	0.16.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
 Source0:	http://www.gupnp.org/sources/gupnp/%{name}-%{version}.tar.gz
-BuildRequires:	gssdp-devel >= 0.7.0
+BuildRequires:	gssdp-devel >= 0.9.2
 BuildRequires:	libuuid-devel
-BuildRequires:	libsoup-devel
+BuildRequires:	libsoup-devel >= 2.28.2
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gobject-introspection-devel
@@ -27,6 +28,7 @@ devices and control points.
 Summary:	Main library for gupnp
 Group:		System/Libraries
 Provides:	%{name} = %{version}-%{release}
+Obsoletes:	%{_lib}gupnp3 < 0.16.0
 Conflicts: gir-repository < 0.6.5-11
 
 %description -n %{libname}
@@ -67,9 +69,8 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_libdir}/*.so.%{major}*
+%{_libdir}/*%{api}.so.%{major}*
 %_libdir/girepository-1.0/GUPnP-1.0.typelib
-
 
 %files -n %{develname}
 %defattr(-,root,root)

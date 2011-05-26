@@ -5,12 +5,12 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.16.0
+Version:	0.16.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
-Source0:	http://www.gupnp.org/sources/gupnp/%{name}-%{version}.tar.gz
+Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 BuildRequires:	gssdp-devel >= 0.9.2
 BuildRequires:	libuuid-devel
 BuildRequires:	libsoup-devel >= 2.28.2

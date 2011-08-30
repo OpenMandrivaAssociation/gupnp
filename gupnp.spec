@@ -1,17 +1,17 @@
 %define api 1.0
-%define major 3
+%define major 4
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.16.1
+Version:	0.18.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
-Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-BuildRequires:	gssdp-devel >= 0.9.2
+Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
+BuildRequires:	gssdp-devel >= 0.11.2
 BuildRequires:	libuuid-devel
 BuildRequires:	libsoup-devel >= 2.28.2
 BuildRequires:	libxml2-devel
@@ -56,13 +56,6 @@ applications which will use gupnp
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %clean
 rm -rf %{buildroot}

@@ -6,7 +6,7 @@
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
 Version:	0.18.0
-Release:	%mkrel 1
+Release:	2
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
@@ -17,14 +17,12 @@ BuildRequires:	libsoup-devel >= 2.28.2
 BuildRequires:	libxml2-devel
 BuildRequires:	glib2-devel
 BuildRequires:	gobject-introspection-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 GUPnP is an object-oriented open source framework for creating UPnP 
 devices and control points.
 
 %package -n %{libname}
-
 Summary:	Main library for gupnp
 Group:		System/Libraries
 Provides:	%{name} = %{version}-%{release}
@@ -50,29 +48,26 @@ applications which will use gupnp
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x \
+	--disable-static
+
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+find %{buildroot} -name '*.la' | xargs rm
 
-%clean
-rm -rf %{buildroot}
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/*%{api}.so.%{major}*
 %_libdir/girepository-1.0/GUPnP-1.0.typelib
 
 %files -n %{develname}
-%defattr(-,root,root)
 %doc AUTHORS README NEWS
 %{_libdir}/pkgconfig/gupnp*.pc
 %{_includedir}/gupnp-1.0/lib%{name}/*.h
 %{_libdir}/*.so
-%{_libdir}/*.la
-%{_libdir}/*.a
 %{_datadir}/gtk-doc/html/*
 %{_bindir}/gupnp-binding-tool
 %_datadir/gir-1.0/GUPnP-1.0.gir

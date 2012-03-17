@@ -5,7 +5,7 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.18.1
+Version:	0.18.2
 Release:	1
 License:	GPLv2+
 Group:		Development/Other

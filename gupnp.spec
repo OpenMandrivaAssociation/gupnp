@@ -11,6 +11,7 @@ License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
+Patch0: gupnp-0.18.2-fix-linking.patch
 BuildRequires:	gssdp-devel >= 0.11.2
 BuildRequires:	libuuid-devel
 BuildRequires:	libsoup-devel >= 2.28.2
@@ -46,6 +47,9 @@ applications which will use gupnp
 
 %prep
 %setup -q
+%apply_patches
+
+autoreconf -fi
 
 %build
 %configure2_5x \

@@ -8,13 +8,12 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.18.4
-Release:	3
+Version:	0.19.4
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gupnp/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		gupnp-0.18.2-fix-linking.patch
 
 BuildRequires:	pkgconfig(gssdp-1.0) >= 0.11.2
 BuildRequires:	pkgconfig(glib-2.0)

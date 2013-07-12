@@ -8,7 +8,7 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.19.4
+Version:	0.20.3
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libsoup-2.4) >= 2.28.2
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(uuid)
+BuildRequires:  vala-tools
 
 %description
 GUPnP is an object-oriented open source framework for creating UPnP 
@@ -82,4 +83,5 @@ autoreconf -fi
 %{_datadir}/gtk-doc/html/*
 %{_bindir}/gupnp-binding-tool
 %{_datadir}/gir-1.0/GUPnP-1.0.gir
+%{_datadir}/vala/vapi/*
 

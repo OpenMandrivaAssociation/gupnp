@@ -8,7 +8,7 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.19.4
+Version:	0.20.3
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -82,4 +82,5 @@ autoreconf -fi
 %{_datadir}/gtk-doc/html/*
 %{_bindir}/gupnp-binding-tool
 %{_datadir}/gir-1.0/GUPnP-1.0.gir
+%{_datadir}/vala/vapi/*
 

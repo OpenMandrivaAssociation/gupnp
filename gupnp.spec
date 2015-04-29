@@ -8,7 +8,7 @@
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	0.20.12
+Version:	 0.20.13
 Release:	2
 License:	GPLv2+
 Group:		Development/Other
@@ -24,7 +24,7 @@ BuildRequires:	pkgconfig(uuid)
 BuildRequires:  vala-tools
 
 %description
-GUPnP is an object-oriented open source framework for creating UPnP 
+GUPnP is an object-oriented open source framework for creating UPnP
 devices and control points.
 
 %package -n %{libname}

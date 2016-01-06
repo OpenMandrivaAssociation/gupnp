@@ -2,6 +2,7 @@ removed_sources:
   gupnp-0.18.4.tar.xz: e2ae6fd8e62ab280c0808af9ab122c90f090f274
   gupnp-0.19.4.tar.xz: 22c67a9732d8e333e0125d2850df6a1cf8b16e3a
   gupnp-0.20.12.tar.xz: fbc23c0fa0df70f44d50b2ed88dc2c4dc06d166c
+  gupnp-0.20.13.tar.xz: eaec209a94e40dc98ba3af96277d79eeba59ddad
   gupnp-0.20.5.tar.xz: e97c7b5bfcb26094eabb85163059e4cd84334368
 sources:
-  gupnp-0.20.13.tar.xz: eaec209a94e40dc98ba3af96277d79eeba59ddad
+  gupnp-0.20.15.tar.xz: 25c25e924ef3713ed0edc3fd546f962fd148d70e

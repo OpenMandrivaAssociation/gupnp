@@ -15,7 +15,6 @@ Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gupnp/%{url_ver}/%{name}-%{version}.tar.xz
 
-BuildRequires:	pkgconfig(gssdp-1.0) >= 0.11.2
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libsoup-2.4) >= 2.28.2

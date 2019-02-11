@@ -1,15 +1,15 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api	1.0
-%define major	4
+%define api	1.2
+%define major	0
 %define libname %mklibname %{name} %{api} %{major}
 %define girname %mklibname %{name}-gir %{api}
 %define devname %mklibname %{name} -d
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	1.0.3
-Release:	2
+Version:	1.1.2
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gupnp/
@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libsoup-2.4) >= 2.28.2
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(uuid)
+BuildRequires:	meson
 BuildRequires:  vala-tools
 
 %description
@@ -58,16 +59,13 @@ applications which will use gupnp
 %prep
 %setup -q
 %apply_patches
-autoreconf -fi
 
 %build
-%configure2_5x \
-	--disable-static
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %files -n %{libname}
 %{_libdir}/*%{api}.so.%{major}*
@@ -78,10 +76,9 @@ autoreconf -fi
 %files -n %{devname}
 %doc AUTHORS README NEWS
 %{_libdir}/pkgconfig/gupnp*.pc
-%{_includedir}/gupnp-1.0/lib%{name}/*.h
+%{_includedir}/gupnp-%{api}/lib%{name}/*.h
 %{_libdir}/*.so
-%{_datadir}/gtk-doc/html/*
-%{_bindir}/gupnp-binding-tool
-%{_datadir}/gir-1.0/GUPnP-1.0.gir
+%{_bindir}/gupnp-binding-tool-%{api}
+%{_datadir}/gir-1.0/GUPnP-%{api}.gir
 %{_datadir}/vala/vapi/*
 

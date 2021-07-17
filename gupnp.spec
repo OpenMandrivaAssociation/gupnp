@@ -74,11 +74,10 @@ applications which will use gupnp
 %{_libdir}/girepository-1.0/GUPnP-%{api}.typelib
 
 %files -n %{devname}
-%doc AUTHORS README NEWS
+%doc AUTHORS README.md NEWS
 %{_libdir}/pkgconfig/gupnp*.pc
 %{_includedir}/gupnp-%{api}/lib%{name}/*.h
 %{_libdir}/*.so
 %{_bindir}/gupnp-binding-tool-%{api}
 %{_datadir}/gir-1.0/GUPnP-%{api}.gir
 %{_datadir}/vala/vapi/*
-

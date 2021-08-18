@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(libsoup-2.4) >= 2.28.2
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:  pkgconfig(gssdp-1.2)
+BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:	meson
 BuildRequires:  vala-tools
 

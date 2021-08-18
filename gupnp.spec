@@ -1,7 +1,7 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
 %define api	1.2
-%define major	0
+%define major	1
 %define libname %mklibname %{name} %{api} %{major}
 %define girname %mklibname %{name}-gir %{api}
 %define devname %mklibname %{name} -d
@@ -69,7 +69,7 @@ applications which will use gupnp
 %meson_install
 
 %files -n %{libname}
-#{_libdir}/*%{api}.so.%{major}*
+%{_libdir}/*%{api}.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/GUPnP-%{api}.typelib

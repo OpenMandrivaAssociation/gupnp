@@ -69,7 +69,7 @@ applications which will use gupnp
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/*%{api}.so.%{major}*
+#{_libdir}/*%{api}.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/GUPnP-%{api}.typelib

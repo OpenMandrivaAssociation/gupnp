@@ -20,7 +20,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:  pkgconfig(gssdp-1.2)
+BuildRequires:  pkgconfig(gssdp-1.6)
 BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:	meson
 BuildRequires:  vala-tools

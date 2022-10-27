@@ -1,14 +1,14 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api	1.2
-%define major	1
+%define api	1.6
+%define major	0
 %define libname %mklibname %{name} %{api} %{major}
 %define girname %mklibname %{name}-gir %{api}
 %define devname %mklibname %{name} -d
 
 Summary:	Object-oriented framework for creating UPnP devices and control points
 Name:		gupnp
-Version:	1.4.3
+Version:	1.6.0
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -17,10 +17,10 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gupnp/%{url_ver}/%{name}-%{versi
 
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
-BuildRequires:	pkgconfig(libsoup-2.4) >= 2.28.2
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:  pkgconfig(gssdp-1.2)
+BuildRequires:  pkgconfig(gssdp-1.6)
 BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:	meson
 BuildRequires:  vala-tools

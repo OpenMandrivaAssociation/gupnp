@@ -12,7 +12,7 @@ Version:	1.6.7
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
-Url:		http://www.gupnp.org/sources/gupnp/
+Url:		https://www.gupnp.org/sources/gupnp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gupnp/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(glib-2.0)
